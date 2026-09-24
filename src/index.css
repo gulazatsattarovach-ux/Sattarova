@@ -1,0 +1,54 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Montserrat', 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  --font-display: 'Montserrat', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+  --color-navy: #0B1033;
+  --color-navy-dark: #070A22;
+  --color-navy-light: #131A4D;
+  --color-tech-purple: #6C3BFF;
+  --color-tech-blue: #2F54EB;
+  --color-tech-cyan: #00F0FF;
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    opacity: 0.4;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.7;
+    transform: scale(1.05);
+  }
+}
+
+@keyframes circuitPulse {
+  0% {
+    stroke-dashoffset: 200;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+.circuit-line {
+  stroke-dasharray: 20, 10;
+  animation: circuitPulse 12s linear infinite;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #070A22;
+}
+::-webkit-scrollbar-thumb {
+  background: #232B66;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #6C3BFF;
+}
+
